@@ -22,7 +22,7 @@ int main() {
     AngularMotion amotion;           // Angular motion variables
     PowerMotion pmotion;             // Energy and force variables
 
-    // Main menu: Display available topics
+ 
     std::cout << "WELCOME TO THE NEWTON LAB (; \n";
     std::cout << "Choose a field:\n";
     std::cout << "1_ Linear motion\n";
@@ -43,8 +43,7 @@ case 1:
 
     switch (calc) {
         case 1:
-            std::cout << "The first law of motion: F = m * a\n"; // Force equals mass times acceleration
-            break;
+            std::cout << "The first law of motion: F = m * a\n";
 
         case 2:
             // Distance formula: d = Vi * t + 0.5 * a * t^2
@@ -71,7 +70,7 @@ case 1:
             break;
 
         case 5:
-            // Display definitions in English and French for Linear Motion
+        
             std::cout << "Choose language (0 for English, 1 for French): ";
             std::cin >> language;
 
@@ -123,7 +122,7 @@ case 1:
             break;
 
         default:
-            std::cout << "Invalid choice. Please try again.\n";
+            std::cout << "stupid >_< , try again.\n";
     }
     break;
 
@@ -143,7 +142,7 @@ case 1:
     switch (calc) {
         case 1:
             // Angular acceleration input (dw = (w - wi) / t)
-            // We assume dw is the angular acceleration, and the user provides w and wi to compute the change.
+            // We assume dw is the angular acceleration, anduser provides w and wi to compute the change.
             std::cout << "Enter initial angular velocity (wi) and final angular velocity (w): ";
             std::cin >> amotion.w >> amotion.dw;
             // Angular acceleration = (final velocity - initial velocity)
@@ -264,11 +263,10 @@ case 1:
             break;
 
         default:
-            std::cout << "Invalid choice. Please enter a number between 1 and 8.\n";
+            std::cout << "stupid >_< , enter a number between 1 and 8.\n";
     }
     break;
-
-        // --- Energy and Force Calculations ---
+        
         // --- Energy and Force Calculations ---
 case 3:
     std::cout << "Energy and Force:\n";
@@ -282,7 +280,7 @@ case 3:
 
     switch (calc) {
         case 1:
-            // Kinetic Energy formula: KE = 0.5 * m * v^2
+           
             std::cout << "Enter mass (m) and velocity (v): ";
             std::cin >> pmotion.m >> pmotion.v;
             pmotion.ke = 0.5 * pmotion.m * std::pow(pmotion.v, 2); // Use std::pow for squaring
@@ -381,13 +379,13 @@ case 3:
             break;
 
         default:
-            std::cout << "Invalid choice. Please try again.\n";
+            std::cout << "stupid >_< , try again.\n";
     }
     break;
 
 
         default:
-            std::cout << "Invalid field choice. Please try again.\n";
+            std::cout << "stupid >_< , try again.\n";
     }
 
     return 0;
