@@ -15,19 +15,14 @@ struct AngularMotion {
 struct PowerMotion {
     double ke, m, v, pe, g, h, tme, w, t, p, f, d, the, q, c, dt, e,a, k, x; // Variables for energy and force
 };
+void displayMenu();
 
 int main() {
     int choice, calc,language;                // Main choice and calculation choice
     Motion motion;                   // Linear motion variables
     AngularMotion amotion;           // Angular motion variables
-    PowerMotion pmotion;             // Energy and force variables
-
- 
-    std::cout << "WELCOME TO THE NEWTON LAB (; \n";
-    std::cout << "Choose a field:\n";
-    std::cout << "1_ Linear motion\n";
-    std::cout << "2_ Circular motion\n";
-    std::cout << "3_ Energy and force\n";
+    PowerMotion pmotion; // Energy and force variables
+    displayMenu();
     std::cin >> choice;
 
     switch (choice) {
@@ -390,3 +385,11 @@ case 3:
 
     return 0;
 }
+void displayMenu() { std::cout << "\n=====================================\n";
+std::cout << " WELCOME TO THE NEWTON LAB (;\n";
+std::cout << "=====================================\n"; 
+std::cout << "Choose a field:\n";
+std::cout << "1. Linear motion\n";
+std::cout << "2. Circular motion\n";
+std::cout << "3. Energy and force\n";
+std::cout << "Enter your choice (1-3): "; }
